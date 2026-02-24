@@ -130,6 +130,46 @@ This documentation aims to help others understand:
 Anyone interested in building a private, self-controlled media server can use this repository as a starting point.
 
 ---
+## Basic Commands to Manage the Server
+ssh user@server_ip                      # Connect to the server via SSH
+sudo apt update                         # Refresh package lists
+sudo apt upgrade -y                     # Upgrade installed packages
+sudo apt autoremove -y                  # Remove unused packages
+sudo reboot                             # Reboot the server
+
+docker --version                        # Check Docker installation
+docker compose version                  # Verify Docker Compose
+
+docker compose up -d                    # Start Immich services
+docker compose down                     # Stop Immich services
+docker compose restart                  # Restart Immich containers
+docker ps                               # List running containers
+docker ps -a                            # List all containers
+
+docker compose logs -f                  # View live service logs
+docker logs immich_server               # View Immich server logs
+
+docker compose pull                     # Pull latest images
+docker image prune -f                   # Remove unused Docker images
+
+df -h                                   # Check disk usage
+du -sh *                                # Check directory sizes
+free -h                                 # View memory usage
+htop                                    # Monitor CPU & RAM usage
+
+ss -tuln                                # List open network ports
+ip a                                    # Display IP addresses
+
+sudo ufw status                         # Check firewall status
+sudo ufw allow 2283                     # Allow Immich web port
+sudo ufw allow ssh                      # Allow SSH access
+sudo ufw enable                         # Enable firewall
+
+docker volume ls                        # List Docker volumes
+tar -czvf immich_backup.tar.gz /path/to/immich   # Create manual backup
+
+docker stop $(docker ps -q)             # Stop all running containers
+sudo systemctl restart docker           # Restart Docker service
 
 ## Encouraging Responsible Self-Hosting
 
@@ -143,3 +183,4 @@ Self-hosting is not only about running services — it is about:
 If this project helps you build your own setup, improve your privacy posture, or learn containerized infrastructure, then it has served its purpose.
 
 ---
+
