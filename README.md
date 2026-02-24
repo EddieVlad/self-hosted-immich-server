@@ -130,7 +130,6 @@ This documentation aims to help others understand:
 Anyone interested in building a private, self-controlled media server can use this repository as a starting point.
 
 ---
-## Basic Commands to Manage the Server
 ## 🛠️ Basic Server Management Commands
 
 ```bash
@@ -188,5 +187,6 @@ Self-hosting is not only about running services — it is about:
 If this project helps you build your own setup, improve your privacy posture, or learn containerized infrastructure, then it has served its purpose.
 
 ---
+
 
 
